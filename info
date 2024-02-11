@@ -1,0 +1,7 @@
+protoc -I proto proto/sso/sso.proto --go_out=./gen/go --go_opt=paths=source_relative --go-grpc_out=./gen/go/ --go-grpc_opt=paths=source_relative
+
+-I proto -путь до каталога с исходниками
+proto/sso/sso.proto -файл, который будем компилировать
+--go_out=./gen/go -куда сохраняем скомпилированные файлы
+--go_opt=paths=source_relative -технический параметр. Скомпилированные пакеты используют пакет, что и исходные файлы
+--go-grpc_out=./gen/go/ -куда сохраняем сгенерированный grpc код
